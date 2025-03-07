@@ -53,7 +53,7 @@ export const AdminContent = ({ posts, status }) => {
 	const [scrollTop, setScrollTop] = useState(0);
 
 	useEffect(() => {
-		const handleScroll = (event) => {
+		const handleScroll = () => {
 			if ('posts' === currentView) {
 				setScrollTop(window.scrollY);
 			}

@@ -1,5 +1,4 @@
 import { useSelect } from '@wordpress/data';
-import { store as coreStore } from '@wordpress/core-data';
 
 /**
  * There does not appear to be a simple way to determine if a user has access to a Post Type's trash.
