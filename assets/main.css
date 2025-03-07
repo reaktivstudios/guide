@@ -1,0 +1,56 @@
+.site-guide .entry-header {
+	margin-bottom: 2rem;
+}
+
+.site-guide .entry-meta {
+	margin-bottom: 1rem;
+}
+
+.rkv-site-guide-header {
+	width: 100%;
+}
+
+.rkv-site-guide-header__link {
+	display: flex;
+	align-items: center;
+	font-size: 4rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.rkv-site-guide-header__link p {
+	position: relative;
+	left: -30px;
+	display: block;
+	width: fit-content;
+	margin-bottom: 0 !important;
+
+	background-image: linear-gradient(currentcolor, currentcolor);
+	background-size: 0 2px;
+	background-repeat: no-repeat;
+	background-position-y: 95%;
+	background-position-x: 100%;
+	transition: background-size 0.5s ease-in-out;
+	text-decoration: none !important;
+}
+
+@media (prefers-reduced-motion) {
+	.rkv-site-guide-header__link p {
+		transition: none;
+	}
+}
+
+.rkv-site-guide-header__link:hover p,
+.rkv-site-guide-header__link:focus p {
+	background-size: 100% 2px;
+	background-position-x: 0;
+	text-decoration: none !important;
+}
+
+.rkv-site-guide-header__link svg {
+	max-width: 150px;
+}
+
+.rkv-site-guide-header__link svg .st1 {
+	fill: #fff;
+}

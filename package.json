@@ -1,0 +1,12 @@
+{
+	"devDependencies": {
+		"@wordpress/icons": "^10.0.0",
+		"@wordpress/scripts": "^27.0.0",
+		"clsx": "^2.1.1",
+		"react-router-dom": "^6.23.1"
+	},
+	"scripts": {
+		"build": "wp-scripts build assets/src/admin.js --output-path=dist",
+		"start": "wp-scripts start assets/src/admin.js --output-path=dist"
+	}
+}

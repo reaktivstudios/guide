@@ -1,0 +1,22 @@
+<?php 
+/**
+ * Creates standard text elements like paragraphs, headings, etc.
+ * 
+ * @package rkv-site-guide
+ */
+
+namespace RKV\Site_Guide\API\Blocks;
+
+use stdClass;
+
+/**
+ * Text block.
+ */
+class Text extends Base {
+	/**
+	 * The html tag.
+	 *
+	 * @var string
+	 */
+	protected string $tag = '';
+}
