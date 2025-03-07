@@ -13,7 +13,7 @@ export const AdminArticle = ({ currentPost }) => {
 		'guide-type',
 		{
 			per_page: -1,
-		}
+		},
 	);
 
 	if (!currentPost > 0) {

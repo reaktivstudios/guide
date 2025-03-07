@@ -12,6 +12,8 @@ import { decodeEntities } from '@wordpress/html-entities';
 import { __ } from '@wordpress/i18n';
 import { addQueryArgs } from '@wordpress/url';
 
+/* global Intl */
+
 /**
  * External dependencies.
  */
@@ -33,7 +35,7 @@ export const AdminCards = ({ posts }) => {
 							addQueryArgs(location.pathname, {
 								page: 'site-guide',
 								article: post.slug,
-							})
+							}),
 						);
 					}}
 				/>

@@ -10,7 +10,7 @@ import {
 } from '@wordpress/components';
 import { useSelect, useDispatch } from '@wordpress/data';
 import { useEffect, useState } from '@wordpress/element';
-import { store as coreStore, useResourcePermissions, useEntityRecords } from '@wordpress/core-data';
+import { store as coreStore, useResourcePermissions } from '@wordpress/core-data';
 import { store as noticesStore } from '@wordpress/notices';
 import { addQueryArgs } from '@wordpress/url';
 
@@ -53,9 +53,9 @@ export const AdminToolbar = ({ posts, status }) => {
 	}, [resultOfCanUserViewTrash]);
 
 	// Get the rest of the user permissions.
-	const { canCreate, canDelete, canRead, canUpdate } = useResourcePermissions(
+	const { canCreate, canDelete, canUpdate } = useResourcePermissions(
 		'site-guide',
-		currentPost.id ?? ''
+		currentPost.id ?? '',
 	);
 
 	// Post Trashing.
@@ -71,7 +71,7 @@ export const AdminToolbar = ({ posts, status }) => {
 				? select(coreStore).isDeletingEntityRecord('postType', 'page', currentPost.id)
 				: false,
 		}),
-		[currentPost.id]
+		[currentPost.id],
 	);
 
 	const handleConfirm = async () => {
@@ -85,7 +85,7 @@ export const AdminToolbar = ({ posts, status }) => {
 			navigate(
 				addQueryArgs(location.pathname, {
 					page: 'site-guide',
-				})
+				}),
 			);
 		} else {
 			// We use the selector directly to get the fresh error *after* the deleteEntityRecord
@@ -127,7 +127,7 @@ export const AdminToolbar = ({ posts, status }) => {
 								navigate(
 									addQueryArgs(location.pathname, {
 										page: 'site-guide',
-									})
+									}),
 								);
 							}}
 						>
