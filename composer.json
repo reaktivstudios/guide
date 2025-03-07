@@ -16,7 +16,12 @@
 	"homepage": "https://github.com/reaktivstudios/boilerplate",
 	"license": "GPL-2.0-or-later",
 	"require": {},
-	"require-dev": {},
+	"require-dev": {
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"php-parallel-lint/php-parallel-lint": "^1.2.0",
+		"wp-coding-standards/wpcs": "^3.0.0",
+		"automattic/vipwpcs": "^3.0.0"
+	},
 	"autoload": {
 		"psr-4": {
 			"RKV\\Site_Guide\\": "./inc/classes/"
