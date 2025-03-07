@@ -134,6 +134,11 @@
 					font-size: inherit;
 				}
 
+				ul {
+					list-style-type: disc;
+					padding-inline-start: 1em;
+				}
+
 				@media (width >= 900px) {
 					.rkv-column-list {
 						width: 900px;
