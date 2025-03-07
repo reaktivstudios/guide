@@ -7,6 +7,16 @@
 	},
 	"scripts": {
 		"build": "wp-scripts build assets/src/admin.js --output-path=dist",
-		"start": "wp-scripts start assets/src/admin.js --output-path=dist"
+		"start": "wp-scripts start assets/src/admin.js --output-path=dist",
+		"lint:js": "eslint assets/src/**/*.js",
+		"lint:js:fix": "eslint assets/src/**/*.js --fix"
+	},
+	"dependencies": {
+		"eslint": "^8.57.1",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-config-wordpress": "^2.0.0",
+		"eslint-plugin-prettier": "^5.2.3",
+		"eslint-plugin-react": "^7.37.4",
+		"globals": "^16.0.0"
 	}
 }
