@@ -37,7 +37,7 @@ export const AdminToolbar = ({ posts, status }) => {
 		if ('ERROR' == status) {
 			return setCurrentPost(false);
 		}
-		const currentPost = posts.find((post) => post.slug === articleSlug);
+		const currentPost = posts ? posts.find((post) => post.slug === articleSlug) : false;
 		currentPost ? setCurrentPost(currentPost) : setCurrentPost(false);
 	}, [articleSlug]);
 

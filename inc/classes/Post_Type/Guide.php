@@ -37,7 +37,7 @@ class Guide extends Base {
 
 		$this->post_type_args = [
 			'labels'              => $labels,
-			'description'         => __( 'Site Guides', 'rkv-guide' ),
+			'description'         => __( 'The Guide', 'rkv-guide' ),
 			'taxonomies'          => [ 'guide-type' ],
 			'menu_position'       => 2,
 			'menu_icon'           => 'dashicons-welcome-widgets-menus',

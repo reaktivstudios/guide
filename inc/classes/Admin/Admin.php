@@ -27,8 +27,8 @@ class Admin {
 
 		// Add our page.
 		add_menu_page(
-			__( 'Site Guide Articles', 'rkv-guide' ),
-			__( 'Site Guide', 'rkv-guide' ),
+			__( 'Guide Articles', 'rkv-guide' ),
+			__( 'The Guide', 'rkv-guide' ),
 			'edit_posts',
 			'site-guide',
 			[ $this, 'submenu_page_callback' ],
