@@ -18,7 +18,7 @@ import { AdminArticle } from './article';
 export const AdminContent = ({ posts, status }) => {
 	// If there are no posts, return early.
 	if ('ERROR' == status || posts.length < 1) {
-		return <div>{__('No site guide articles to display', 'rkv-site-guide')}</div>;
+		return <div>{__('No site guide articles to display', 'rkv-guide')}</div>;
 	}
 
 	const [currentView, setCurrentView] = useState(false);

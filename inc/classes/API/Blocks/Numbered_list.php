@@ -2,7 +2,7 @@
 /**
  * Creates a numbered list.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\API\Blocks;

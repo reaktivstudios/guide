@@ -5,7 +5,7 @@
  * These constants must be defined in the site config. 
  * They are not registered here, this just exists to clear errors.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 define( 'RKV_SITE_GUIDE_API_KEY', '' );

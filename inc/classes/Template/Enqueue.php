@@ -2,7 +2,7 @@
 /**
  * Enqueues front end styles.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\Template;
@@ -29,7 +29,7 @@ class Enqueue {
 		}
 
 		wp_enqueue_style( 
-			'rkv-site-guide-css',
+			'rkv-guide-css',
 			trailingslashit( RKV_SITE_GUIDE_URL ) . 'assets/main.css',
 			[],
 			filemtime( trailingslashit( RKV_SITE_GUIDE_PATH ) . 'assets/main.css' )

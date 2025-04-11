@@ -1,8 +1,8 @@
 <?php
 /**
- * Adds the site guide to the site.
+ * Adds the guide to the site.
  *
- * Plugin Name: Reaktiv Site Guide
+ * Plugin Name: The Guide by Reaktiv
  * Plugin URI: https://github.com/reaktivstudios/rkv-starter
  * Description: Adds the site guide to the site.
  * Author: Reaktiv Studios
@@ -11,7 +11,7 @@
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 define( 'RKV_SITE_GUIDE_PATH', plugin_dir_path( __FILE__ ) );
@@ -23,7 +23,7 @@ define( 'RKV_SITE_GUIDE_URL', plugin_dir_url( __FILE__ ) );
  * @return void
  */
 function rkv_site_guide_lang() {
-	load_plugin_textdomain( 'rkv-site-guide', false, RKV_SITE_GUIDE_PATH . '/languages/' . get_locale() );
+	load_plugin_textdomain( 'rkv-guide', false, RKV_SITE_GUIDE_PATH . '/languages/' . get_locale() );
 }
 add_action( 'init', 'rkv_site_guide_lang' );
 

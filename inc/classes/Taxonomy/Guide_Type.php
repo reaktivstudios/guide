@@ -2,7 +2,7 @@
 /**
  * Base taxonomy class.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\Taxonomy;
@@ -37,18 +37,18 @@ class Guide_Type extends Base {
 	 */
 	protected function initialize_taxonomy() {
 		$labels = [
-			'name'              => _x( 'Types', 'taxonomy general name', 'rkv-site-guide' ),
-			'singular_name'     => _x( 'Type', 'taxonomy singular name', 'rkv-site-guide' ),
-			'search_items'      => __( 'Search Types', 'rkv-site-guide' ),
-			'all_items'         => __( 'All Types', 'rkv-site-guide' ),
-			'parent_item'       => __( 'Parent Type', 'rkv-site-guide' ),
-			'parent_item_colon' => __( 'Parent Type:', 'rkv-site-guide' ),
-			'edit_item'         => __( 'Edit Type', 'rkv-site-guide' ),
-			'update_item'       => __( 'Update Type', 'rkv-site-guide' ),
-			'add_new_item'      => __( 'Add New Type', 'rkv-site-guide' ),
-			'new_item_name'     => __( 'New Type Name', 'rkv-site-guide' ),
-			'menu_name'         => __( 'Types', 'rkv-site-guide' ),
-			'not_found'         => __( 'No Types Found', 'rkv-site-guide' ),
+			'name'              => _x( 'Types', 'taxonomy general name', 'rkv-guide' ),
+			'singular_name'     => _x( 'Type', 'taxonomy singular name', 'rkv-guide' ),
+			'search_items'      => __( 'Search Types', 'rkv-guide' ),
+			'all_items'         => __( 'All Types', 'rkv-guide' ),
+			'parent_item'       => __( 'Parent Type', 'rkv-guide' ),
+			'parent_item_colon' => __( 'Parent Type:', 'rkv-guide' ),
+			'edit_item'         => __( 'Edit Type', 'rkv-guide' ),
+			'update_item'       => __( 'Update Type', 'rkv-guide' ),
+			'add_new_item'      => __( 'Add New Type', 'rkv-guide' ),
+			'new_item_name'     => __( 'New Type Name', 'rkv-guide' ),
+			'menu_name'         => __( 'Types', 'rkv-guide' ),
+			'not_found'         => __( 'No Types Found', 'rkv-guide' ),
 		];
 
 		$this->taxonomy_args = [

@@ -2,7 +2,7 @@
 /**
  * Syncs the guide docs from Notion.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\API;
@@ -34,7 +34,7 @@ class Sync {
 	 * Add the actions.
 	 */
 	public function __construct() {
-		if ( empty( $_GET['rkv-site-guide-sync'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( empty( $_GET['rkv-guide-sync'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			return;
 		}
 		add_action( 'init', [ $this, 'callback' ], 11 );

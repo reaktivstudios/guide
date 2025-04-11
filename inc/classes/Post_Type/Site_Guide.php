@@ -2,7 +2,7 @@
 /**
  * Base post type class.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\Post_Type;
@@ -24,20 +24,20 @@ class Site_Guide extends Base {
 	 */
 	protected function initialize_post_type() {
 		$labels = [
-			'name'               => __( 'Docs', 'rkv-site-guide' ),
-			'singular_name'      => __( 'Doc', 'rkv-site-guide' ),
-			'edit_item'          => __( 'Edit Doc', 'rkv-site-guide' ),
-			'new_item'           => __( 'New Doc', 'rkv-site-guide' ),
-			'view_item'          => __( 'View Doc', 'rkv-site-guide' ),
-			'search_items'       => __( 'Search Docs', 'rkv-site-guide' ),
-			'not_found'          => __( 'No Docs found', 'rkv-site-guide' ),
-			'not_found_in_trash' => __( 'No Docs found in Trash', 'rkv-site-guide' ),
-			'menu_name'          => __( 'Site Guide', 'rkv-site-guide' ),
+			'name'               => __( 'Docs', 'rkv-guide' ),
+			'singular_name'      => __( 'Doc', 'rkv-guide' ),
+			'edit_item'          => __( 'Edit Doc', 'rkv-guide' ),
+			'new_item'           => __( 'New Doc', 'rkv-guide' ),
+			'view_item'          => __( 'View Doc', 'rkv-guide' ),
+			'search_items'       => __( 'Search Docs', 'rkv-guide' ),
+			'not_found'          => __( 'No Docs found', 'rkv-guide' ),
+			'not_found_in_trash' => __( 'No Docs found in Trash', 'rkv-guide' ),
+			'menu_name'          => __( 'Site Guide', 'rkv-guide' ),
 		];
 
 		$this->post_type_args = [
 			'labels'              => $labels,
-			'description'         => __( 'Site Guides', 'rkv-site-guide' ),
+			'description'         => __( 'Site Guides', 'rkv-guide' ),
 			'taxonomies'          => [ 'guide-type' ],
 			'menu_position'       => 2,
 			'menu_icon'           => 'dashicons-welcome-widgets-menus',

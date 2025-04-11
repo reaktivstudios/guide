@@ -2,7 +2,7 @@
 /**
  * Get Blocks for a parent ID.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\API;

@@ -2,7 +2,7 @@
 /**
  * Builds the content from the blocks.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\API;
@@ -17,7 +17,7 @@ class CLI {
 	 * Constructor.
 	 */
 	public function __construct() {
-		WP_CLI::add_command( 'rkv-site-guide-sync', [ $this, 'run_sync' ] );
+		WP_CLI::add_command( 'rkv-guide-sync', [ $this, 'run_sync' ] );
 	}
 
 	/**

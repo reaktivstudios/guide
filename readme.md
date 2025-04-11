@@ -1,8 +1,8 @@
-# RKV Site Guide
+# The Guide by Reaktiv
 
 <img width="823" alt="Screenshot 2024-06-10 at 3 48 13 PM" src="https://github.com/reaktivstudios/reaktivist/assets/90352979/ba90672a-679f-494c-8b5b-1fe8906d8c58">
 
-This plugin will pull in docs that have been flagged with "site guide" so that the content is viewable on the WordPress site. This will help make it easier to reference documentation.
+This plugin will pull in docs that have been flagged with "Site Guide" so that the content is viewable on the WordPress site. This will help make it easier to reference documentation.
 
 There are a few steps to get started, so please follow the usage steps below.
 
@@ -38,5 +38,5 @@ For more details:
 The site guides should automatically update once a day, but it is possible to manually sync to push an important update.
 
 1. Log into the WordPress dashboard.
-2. Append this to the wp-admin URL `?rkv-site-guide-sync=1` like `example.com/wp-admin/?rkv-site-guide-sync=1`.
+2. Append this to the wp-admin URL `?rkv-guide-sync=1` like `example.com/wp-admin/?rkv-guide-sync=1`.
 

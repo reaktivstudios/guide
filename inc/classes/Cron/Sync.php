@@ -2,7 +2,7 @@
 /**
  * Adds Cron job to trigger the sync.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\Cron;

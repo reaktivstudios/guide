@@ -2,7 +2,7 @@
 /**
  * Deletes removed docs.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
 namespace RKV\Site_Guide\API;

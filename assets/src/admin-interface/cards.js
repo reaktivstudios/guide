@@ -76,7 +76,7 @@ export const AdminCard = ({ post, onClick }) => {
 				}}
 			></CardBody>
 			<CardFooter>
-				{__('Last Updated: ', 'rkv-site-guide')}
+				{__('Last Updated: ', 'rkv-guide')}
 				{niceDate(post.modified)}
 			</CardFooter>
 		</Card>
