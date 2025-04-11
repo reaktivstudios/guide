@@ -19,7 +19,7 @@
 	"scripts": {
 		"build": "wp-scripts build assets/src/admin.js --output-path=dist",
 		"start": "wp-scripts start assets/src/admin.js --output-path=dist",
-		"lint:js": "eslint assets/src/**/*.js",
+		"lint:js": "eslint eslint.config.js assets/src/**/*.js",
 		"lint:js:fix": "eslint assets/src/**/*.js --fix",
 		"lint:scss": "stylelint assets/src/**/*.scss",
 		"lint:scss:fix": "stylelint assets/src/**/*.scss --fix",
