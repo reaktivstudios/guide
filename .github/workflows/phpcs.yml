@@ -24,6 +24,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
+    - name: Enable phpcodesniffer installer
+      run: composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
