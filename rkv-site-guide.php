@@ -31,5 +31,5 @@ if ( defined( 'RKV_SITE_GUIDE_API_KEY' ) ) {
 	// Autoloader.
 	require RKV_SITE_GUIDE_PATH . '/vendor/autoload.php';
 
-	new RKV\Site_Guide\Core();
+	new RKV\Guide\Core();
 }

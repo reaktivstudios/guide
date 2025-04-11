@@ -5,7 +5,7 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Media;
+namespace RKV\Guide\Media;
 
 /**
  * Class Media Gallery.

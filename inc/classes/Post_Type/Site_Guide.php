@@ -5,12 +5,12 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Post_Type;
+namespace RKV\Guide\Post_Type;
 
 /**
  * Define the base class and associated methods.
  */
-class Site_Guide extends Base {
+class Guide extends Base {
 
 	/**
 	 * Post type name.

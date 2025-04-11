@@ -5,7 +5,7 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API\Blocks;
+namespace RKV\Guide\API\Blocks;
 
 /**
  * Processes block to return a standardized output.

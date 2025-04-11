@@ -5,7 +5,7 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Admin;
+namespace RKV\Guide\Admin;
 
 /**
  * Admin UI.

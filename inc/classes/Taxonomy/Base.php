@@ -5,7 +5,7 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Taxonomy;
+namespace RKV\Guide\Taxonomy;
 
 /**
  * Define the base class and associated methods.

@@ -5,7 +5,7 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API;
+namespace RKV\Guide\API;
 
 use WP_CLI;
 
@@ -43,7 +43,7 @@ class CLI {
 			$_GET['force'] = true; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
 
-		$sync = new \RKV\Site_Guide\API\Sync();
+		$sync = new \RKV\Guide\API\Sync();
 		$sync->callback();
 
 		$changes = $sync->get_changes();

@@ -5,7 +5,7 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Template;
+namespace RKV\Guide\Template;
 
 /**
  * Title class.

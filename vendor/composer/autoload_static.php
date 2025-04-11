@@ -13,7 +13,7 @@ class ComposerStaticInitf2588624ee6dc552bda89bbc51725986
         ),
         'R' => 
         array (
-            'RKV\\Site_Guide\\' => 15,
+            'RKV\\Guide\\' => 15,
         ),
         'P' => 
         array (
@@ -26,7 +26,7 @@ class ComposerStaticInitf2588624ee6dc552bda89bbc51725986
         array (
             0 => __DIR__ . '/..' . '/sirbrillig/phpcs-variable-analysis/VariableAnalysis',
         ),
-        'RKV\\Site_Guide\\' => 
+        'RKV\\Guide\\' => 
         array (
             0 => __DIR__ . '/../..' . '/inc/classes',
         ),

@@ -5,9 +5,9 @@
  * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API;
+namespace RKV\Guide\API;
 
-use RKV\Site_Guide\API\Blocks\Title;
+use RKV\Guide\API\Blocks\Title;
 use stdClass;
 
 /**
