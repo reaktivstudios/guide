@@ -24,14 +24,8 @@ class Core {
 		// Admin.
 		'RKV\Guide\Admin\Admin',
 
-		// API.
-		'\RKV\Guide\API\Sync',
-
-		// API - CLI.
-		'\RKV\Guide\API\CLI',
-
-		// Cron.
-		'\RKV\Guide\Cron\Sync',
+		// Local Docs.
+		'\RKV\Guide\Local_Docs\Sync',
 
 		// Media.
 		'\RKV\Guide\Media\Gallery',
@@ -52,7 +46,9 @@ class Core {
 	 *
 	 * @var array
 	 */
-	private $files = [];
+	private $files = [
+		'inc/helpers.php',
+	];
 
 	/**
 	 * Calls the classes callbacks and initializes the objects.

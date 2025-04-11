@@ -36,6 +36,16 @@ class ComposerStaticInitf2588624ee6dc552bda89bbc51725986
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Parsedown' => 
+            array (
+                0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JakubOnderka\\PhpParallelLint\\Application' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Application.php',
@@ -118,6 +128,7 @@ class ComposerStaticInitf2588624ee6dc552bda89bbc51725986
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitf2588624ee6dc552bda89bbc51725986::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf2588624ee6dc552bda89bbc51725986::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf2588624ee6dc552bda89bbc51725986::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitf2588624ee6dc552bda89bbc51725986::$classMap;
 
         }, null, ClassLoader::class);
