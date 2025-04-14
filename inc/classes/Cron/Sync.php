@@ -2,10 +2,10 @@
 /**
  * Adds Cron job to trigger the sync.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Cron;
+namespace RKV\Guide\Cron;
 
 /**
  * Class Cron Sync
@@ -44,7 +44,7 @@ class Sync {
 	 * @return void
 	 */
 	public function callback() {
-		$sync = new \RKV\Site_Guide\API\Sync();
+		$sync = new \RKV\Guide\API\Sync();
 		$sync->callback();
 	}
 }

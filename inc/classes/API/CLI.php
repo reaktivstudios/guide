@@ -2,10 +2,10 @@
 /**
  * Builds the content from the blocks.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API;
+namespace RKV\Guide\API;
 
 use WP_CLI;
 
@@ -17,7 +17,7 @@ class CLI {
 	 * Constructor.
 	 */
 	public function __construct() {
-		WP_CLI::add_command( 'rkv-site-guide-sync', [ $this, 'run_sync' ] );
+		WP_CLI::add_command( 'rkv-guide-sync', [ $this, 'run_sync' ] );
 	}
 
 	/**
@@ -43,7 +43,7 @@ class CLI {
 			$_GET['force'] = true; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		}
 
-		$sync = new \RKV\Site_Guide\API\Sync();
+		$sync = new \RKV\Guide\API\Sync();
 		$sync->callback();
 
 		$changes = $sync->get_changes();

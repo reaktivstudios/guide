@@ -2,10 +2,10 @@
 /**
  * Base post type class.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Post_Type;
+namespace RKV\Guide\Post_Type;
 
 /**
  * Define the base class and associated methods.

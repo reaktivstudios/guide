@@ -2,10 +2,10 @@
 /**
  * Builds the content from the blocks.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API;
+namespace RKV\Guide\API;
 
 /**
  * Build the content

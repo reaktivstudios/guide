@@ -2,10 +2,10 @@
 /**
  * Creates a bulleted list item
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API\Blocks;
+namespace RKV\Guide\API\Blocks;
 
 /**
  * Bulleted_list_item block.

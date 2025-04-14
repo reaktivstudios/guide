@@ -2,12 +2,12 @@
 /**
  * Get Blocks for a parent ID.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API;
+namespace RKV\Guide\API;
 
-use RKV\Site_Guide\API\Blocks\Parse;
+use RKV\Guide\API\Blocks\Parse;
 
 /**
  * Gets the blocks for a page or block with children.

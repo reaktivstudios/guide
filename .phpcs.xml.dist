@@ -39,7 +39,7 @@
 	</rule>
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="rkv-site-guide"/>
+			<property name="text_domain" type="array" value="rkv-guide"/>
 		</properties>
 	</rule>
 	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing">

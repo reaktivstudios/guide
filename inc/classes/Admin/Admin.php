@@ -2,10 +2,10 @@
 /**
  * Admin interface
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Admin;
+namespace RKV\Guide\Admin;
 
 /**
  * Admin UI.
@@ -27,8 +27,8 @@ class Admin {
 
 		// Add our page.
 		add_menu_page(
-			__( 'Site Guide Articles', 'rkv-site-guide' ),
-			__( 'Site Guide', 'rkv-site-guide' ),
+			__( 'Guide Articles', 'rkv-guide' ),
+			__( 'The Guide', 'rkv-guide' ),
 			'edit_posts',
 			'site-guide',
 			[ $this, 'submenu_page_callback' ],
@@ -45,7 +45,7 @@ class Admin {
 	public function submenu_page_callback() {
 		printf(
 			'<div class="wrap" id="rkv-site-guide-settings">%s</div>',
-			esc_html__( 'Loading…', 'rkv-site-guide' )
+			esc_html__( 'Loading…', 'rkv-guide' )
 		);
 	}
 
@@ -68,7 +68,7 @@ class Admin {
 		$asset = include $asset_file;
 
 		wp_enqueue_script(
-			'rkv-site-guide-admin',
+			'rkv-guide-admin',
 			RKV_SITE_GUIDE_URL . 'dist/admin.js',
 			$asset['dependencies'],
 			$asset['version'],
@@ -78,7 +78,7 @@ class Admin {
 		);
 
 		wp_enqueue_style(
-			'rkv-site-guide-admin',
+			'rkv-guide-admin',
 			RKV_SITE_GUIDE_URL . 'dist/admin.css',
 			[ 'wp-edit-blocks' ],
 			[],

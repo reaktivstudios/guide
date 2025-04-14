@@ -2,10 +2,10 @@
 /**
  * Hides guide images from the media library.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Media;
+namespace RKV\Guide\Media;
 
 /**
  * Class Media Gallery.

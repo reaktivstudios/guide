@@ -2,10 +2,10 @@
 /**
  * Creates standard text elements like paragraphs, headings, etc.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API\Blocks;
+namespace RKV\Guide\API\Blocks;
 
 use stdClass;
 

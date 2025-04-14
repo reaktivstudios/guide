@@ -2,10 +2,10 @@
 /**
  * The core site guide class.
  *
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide;
+namespace RKV\Guide;
 
 /**
  * Initialize all other classes here.
@@ -22,29 +22,29 @@ class Core {
 	 */
 	private $classes = [
 		// Admin.
-		'RKV\Site_Guide\Admin\Admin',
+		'RKV\Guide\Admin\Admin',
 
 		// API.
-		'\RKV\Site_Guide\API\Sync',
+		'\RKV\Guide\API\Sync',
 
 		// API - CLI.
-		'\RKV\Site_Guide\API\CLI',
+		'\RKV\Guide\API\CLI',
 
 		// Cron.
-		'\RKV\Site_Guide\Cron\Sync',
+		'\RKV\Guide\Cron\Sync',
 
 		// Media.
-		'\RKV\Site_Guide\Media\Gallery',
+		'\RKV\Guide\Media\Gallery',
 
 		// Post Types.
-		'\RKV\Site_Guide\Post_Type\Site_Guide',
+		'\RKV\Guide\Post_Type\Guide',
 
 		// Taxonomies.
-		'\RKV\Site_Guide\Taxonomy\Guide_Type',
+		'\RKV\Guide\Taxonomy\Guide_Type',
 
 		// Templates.
-		'\RKV\Site_Guide\Template\Enqueue',
-		'\RKV\Site_Guide\Template\Title',
+		'\RKV\Guide\Template\Enqueue',
+		'\RKV\Guide\Template\Title',
 	];
 
 	/**

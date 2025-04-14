@@ -2,12 +2,12 @@
 /**
  * Adds column.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API\Blocks;
+namespace RKV\Guide\API\Blocks;
 
-use RKV\Site_Guide\API\Get_Blocks;
+use RKV\Guide\API\Get_Blocks;
 
 /**
  * Single column.

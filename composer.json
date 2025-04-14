@@ -24,7 +24,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"RKV\\Site_Guide\\": "./inc/classes/"
+			"RKV\\Guide\\": "./inc/classes/"
 		}
 	},
 	"scripts": {

@@ -2,10 +2,10 @@
 /**
  * Adds images
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\API\Blocks;
+namespace RKV\Guide\API\Blocks;
 
 /**
  * Image block.

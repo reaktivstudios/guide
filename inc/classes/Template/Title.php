@@ -2,10 +2,10 @@
 /**
  * Adds elements to the site guide title.
  * 
- * @package rkv-site-guide
+ * @package rkv-guide
  */
 
-namespace RKV\Site_Guide\Template;
+namespace RKV\Guide\Template;
 
 /**
  * Title class.
@@ -40,7 +40,7 @@ class Title {
 			[
 				'<svg height="100" width="100" role="image"',
 				'viewBox="160 108 216 216"',
-				'<title>' . esc_html__( 'Reaktiv logo', 'rkv-site-guide' ) . '</title><style',
+				'<title>' . esc_html__( 'Reaktiv logo', 'rkv-guide' ) . '</title><style',
 			],
 			$logo
 		);
@@ -49,7 +49,7 @@ class Title {
 	<a href="<?php echo esc_url( get_post_type_archive_link( 'site-guide' ) ); ?>" class="rkv-site-guide-header__link">
 		<?php echo $logo; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		<p>
-			<?php esc_html_e( 'Site Guide', 'rkv-site-guide' ); ?>
+			<?php esc_html_e( 'Site Guide', 'rkv-guide' ); ?>
 		</p>
 	</a>
 </div>

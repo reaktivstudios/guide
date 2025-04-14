@@ -37,7 +37,7 @@ export const AdminToolbar = ({ posts, status }) => {
 		if ('ERROR' == status) {
 			return setCurrentPost(false);
 		}
-		const currentPost = posts.find((post) => post.slug === articleSlug);
+		const currentPost = posts ? posts.find((post) => post.slug === articleSlug) : false;
 		currentPost ? setCurrentPost(currentPost) : setCurrentPost(false);
 	}, [articleSlug]);
 
@@ -104,7 +104,7 @@ export const AdminToolbar = ({ posts, status }) => {
 		<>
 			<HStack className="site-guide-toolbar" justify="space-between" spacing={4} alignment="center">
 				<HStack className="navigation" justify="left">
-					<h1>{__('Site Guide', 'rkv-site-guide')}</h1>
+					<h1>{__('Site Guide', 'rkv-guide')}</h1>
 
 					{canViewTrash && (
 						<Button
@@ -115,7 +115,7 @@ export const AdminToolbar = ({ posts, status }) => {
 								post_type: 'site-guide',
 							})}
 						>
-							{__('View Trash', 'rkv-site-guide')}
+							{__('View Trash', 'rkv-guide')}
 						</Button>
 					)}
 
@@ -131,7 +131,7 @@ export const AdminToolbar = ({ posts, status }) => {
 								);
 							}}
 						>
-							{__('All Articles', 'rkv-site-guide')}
+							{__('All Articles', 'rkv-guide')}
 						</Button>
 					)}
 				</HStack>
@@ -144,7 +144,7 @@ export const AdminToolbar = ({ posts, status }) => {
 								post_type: 'site-guide',
 							})}
 						>
-							{__('New Article', 'rkv-site-guide')}
+							{__('New Article', 'rkv-guide')}
 						</Button>
 					)}
 
@@ -157,7 +157,7 @@ export const AdminToolbar = ({ posts, status }) => {
 								action: 'edit',
 							})}
 						>
-							{__('Edit Article', 'rkv-site-guide')}
+							{__('Edit Article', 'rkv-guide')}
 						</Button>
 					)}
 
@@ -171,7 +171,7 @@ export const AdminToolbar = ({ posts, status }) => {
 								aria-disabled={isDeleting}
 								onClick={isDeleting ? undefined : () => setShowConfirmDialog(true)}
 							>
-								{__('Delete Article', 'rkv-site-guide')}
+								{__('Delete Article', 'rkv-guide')}
 							</Button>
 							<ConfirmDialog
 								isOpen={showConfirmDialog}
