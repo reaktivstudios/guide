@@ -15,7 +15,9 @@
 	"prefer-stable": true,
 	"homepage": "https://github.com/reaktivstudios/boilerplate",
 	"license": "GPL-2.0-or-later",
-	"require": {},
+	"require": {
+		"erusev/parsedown": "^1.7"
+	},
 	"require-dev": {
 		"phpcompatibility/phpcompatibility-wp": "*",
 		"php-parallel-lint/php-parallel-lint": "^1.2.0",

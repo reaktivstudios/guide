@@ -1,6 +1,6 @@
 <?php
 /**
- * Adds the guide to the site.
+ * Adds the guide to a site.
  *
  * Plugin Name: The Guide by Reaktiv
  * Plugin URI: https://github.com/reaktivstudios/rkv-starter
@@ -27,9 +27,7 @@ function rkv_site_guide_lang() {
 }
 add_action( 'init', 'rkv_site_guide_lang' );
 
-if ( defined( 'RKV_SITE_GUIDE_API_KEY' ) ) {
-	// Autoloader.
-	require RKV_SITE_GUIDE_PATH . '/vendor/autoload.php';
+// Autoloader.
+require RKV_SITE_GUIDE_PATH . '/vendor/autoload.php';
 
-	new RKV\Guide\Core();
-}
+new RKV\Guide\Core();
