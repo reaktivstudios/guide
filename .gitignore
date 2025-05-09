@@ -4,3 +4,4 @@ vendor/*
 !vendor/composer
 !vendor/autoload.php
 vendor/composer/install*.*
+.secrets

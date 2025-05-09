@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+  workflow_dispatch:
+
+jobs:
+  # Build the release and create the zip file.
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: NPM Install and Build
+        run: |
+          npm install
+          npm run build
+      - name: Set up Composer
+        uses: php-actions/composer@v6
+      - name: Composer Install
+        run: composer install --no-dev --no-scripts --prefer-dist
+      - name: Create zip
+        run: |
+          mkdir -p versions
+          # Zip everything excluding .git* and node_modules.
+          # File name format: {repo_name}.{version}.zip
+          # Example: rkv-guide-source-notion.1.0.0.zip
+          # The version is taken from the tag name.
+          # The tag name is in the format v1.0.0.
+          # The version is extracted using sed.
+          # The version is in the format 1.0.0.
+          REPO_NAME=$(echo "${GITHUB_REPOSITORY##*/}" | sed 's/-/_/g')
+          VERSION=$(echo "${GITHUB_REF##*/}" | sed 's/^v//')
+          FILE_NAME="${REPO_NAME}.${VERSION}.zip"
+          zip -r versions/${FILE_NAME} * -x '*.git*' -x 'node_modules/*' -x 'versions/*'
+
+          # Save REPO_NAME, FILE_NAME, and VERSION as environment variables
+          echo "REPO_NAME=${REPO_NAME}" >> $GITHUB_ENV
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+          echo "FILE_NAME=${FILE_NAME}" >> $GITHUB_ENV
+      - name: Upload Release Assets
+        if: ${{ github.event_name != 'workflow_dispatch' }}
+        uses: softprops/action-gh-release@v1
+        with:
+          files: 'versions/${{ env.FILE_NAME }}'
+      - name: Upload Artifacts
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        uses: actions/upload-artifact@v3
+        with:
+          path: 'versions/${{ env.FILE_NAME }}'
+      - name: Deploy Package
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_name: reaktivstudios/reaktivist
+          # A personal access token for the GitHub repository in which the release will be created and edited.
+          # It is recommended to create the access token with the following scopes: `repo, user, admin:repo_hook`.
+          repo_token: ${{ secrets.REAKTIVIST_GITHUB_TOKEN }}
+          file: 'versions/${{ env.FILE_NAME }}'
+          asset_name: '${{ env.FILE_NAME }}'
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "Adding ${{ env.REPO_NAME }} ${{ env.VERSION }} release"
