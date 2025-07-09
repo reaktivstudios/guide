@@ -1,4 +1,4 @@
-# The Guide by Reaktiv
+![Guide Plugin](./rkv-core.jpg "The Guide, from Reaktiv")
 
 This plugin adds docs to the Guide in the WordPress dashboard.
 
