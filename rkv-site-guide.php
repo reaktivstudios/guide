@@ -7,7 +7,7 @@
  * Description: Adds the site guide to the site.
  * Author: Reaktiv Studios
  * Author URI: https://reaktivstudios.com
- * Version: 1.1.1
+ * Version: 2.0.0
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
