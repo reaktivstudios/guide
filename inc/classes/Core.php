@@ -39,6 +39,9 @@ class Core {
 		// Templates.
 		'\RKV\Guide\Template\Enqueue',
 		'\RKV\Guide\Template\Title',
+
+		// WP 101.
+		'\RKV\Guide\WP_101\Compat',
 	];
 
 	/**
