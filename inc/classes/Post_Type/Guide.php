@@ -65,7 +65,6 @@ class Guide extends Base {
 		}
 
 		add_action( 'pre_get_posts', [ $this, 'limit_post_access' ] );
-		add_filter( 'user_has_cap', [ $this, 'user_has_cap' ], 10, 3 );
 		add_filter( 'post_type_link', [ $this, 'post_type_link' ], 10, 2 );
 	}
 
