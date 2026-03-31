@@ -14,10 +14,17 @@ import { clsx } from 'clsx';
  */
 import { AdminCards } from './cards';
 import { AdminArticle } from './article';
+import { Filter } from './filter';
 
 export const AdminContent = ({ posts, status }) => {
+	const [foundPosts, setFoundPosts] = useState(posts);
+
 	// If there are no posts, return early.
-	if ('ERROR' == status || !posts || posts?.length < 1) {
+	if ('ERROR' == status) {
+		return <div>{__('Error loading guide articles', 'rkv-guide')}</div>;
+	}
+
+	if (!posts || posts?.length < 1) {
 		return <div>{__('No guide articles to display', 'rkv-guide')}</div>;
 	}
 
@@ -28,6 +35,19 @@ export const AdminContent = ({ posts, status }) => {
 
 	// Get the article slug from the Router loader data.
 	const articleSlug = useLoaderData();
+
+	const filterPostsBySearchTerm = (searchTerm) => {
+		if (searchTerm) {
+			const filteredPosts = posts.filter(
+				(post) =>
+					post.title.rendered.toLowerCase().includes(searchTerm.toLowerCase()) ||
+					post.content.rendered.toLowerCase().includes(searchTerm.toLowerCase()),
+			);
+			setFoundPosts(filteredPosts);
+		} else {
+			setFoundPosts(posts);
+		}
+	};
 
 	// Get the current post from the posts array.
 	useEffect(() => {
@@ -74,9 +94,12 @@ export const AdminContent = ({ posts, status }) => {
 	}
 
 	return (
-		<div className={wrapperClassNames}>
-			<AdminCards posts={posts} />
-			<AdminArticle currentPost={currentPost} />
-		</div>
+		<>
+			{'posts' === currentView && <Filter onChangeSearch={filterPostsBySearchTerm} />}
+			<div className={wrapperClassNames}>
+				<AdminCards posts={foundPosts} />
+				<AdminArticle currentPost={currentPost} />
+			</div>
+		</>
 	);
 };
