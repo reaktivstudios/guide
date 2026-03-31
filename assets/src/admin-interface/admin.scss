@@ -15,6 +15,53 @@
 		margin-bottom: 1em;
 	}
 
+	.filter-hstack {
+		margin-bottom: 1rem;
+	}
+
+	.search-wrap {
+		position: relative;
+		flex: 1;
+
+		.search-reset {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			right: 0;
+			bottom: 0;
+			height: 40px;
+			width: 2rem;
+			background: transparent;
+			border: none;
+			appearance: none;
+			cursor: pointer;
+			font-size: 1.25rem;
+			line-height: 1;
+			transition: all 0.3s ease-in-out;
+			border-top-right-radius: 2px;
+			border-bottom-right-radius: 2px;
+
+			&:hover,
+			&:focus {
+				background-color: #222;
+				color: #fff;
+
+				svg {
+					fill: currentcolor;
+				}
+			}
+		}
+	}
+
+	.search-field {
+		flex: 1;
+
+		.components-base-control__field {
+			margin-bottom: 0;
+		}
+	}
+
 	// Content area...
 	.site-guide-view {
 		display: grid;
