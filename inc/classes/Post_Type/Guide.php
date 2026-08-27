@@ -52,6 +52,7 @@ class Guide extends Base {
 				'editor',
 				'revisions',
 			],
+			'map_meta_cap'        => true,
 			'capabilities'        => [
 				'create_posts' => is_multisite() ? 'do_not_allow' : false,
 				'delete_posts' => is_multisite() ? 'do_not_allow' : false,
