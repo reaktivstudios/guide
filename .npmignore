@@ -1,0 +1,15 @@
+.git
+.git*
+.github
+.claude
+.DS_Store
+/node_modules
+.editorconfig
+.npmignore
+phpcs.xml.dist
+phpunit.xml.dist
+tests
+*.zip
+eslint*
+package*
+/docs

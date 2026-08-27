@@ -1,8 +1,27 @@
 {
+	"name": "curator",
+	"version": "2.2.3",
+	"main": "index.js",
+	"scripts": {
+		"build": "wp-scripts build assets/src/admin.js --output-path=dist",
+		"start": "wp-scripts start assets/src/admin.js --output-path=dist",
+		"lint:js": "eslint eslint.config.js assets/src/**/*.js",
+		"lint:js:fix": "eslint assets/src/**/*.js --fix",
+		"lint:scss": "stylelint assets/src/**/*.scss",
+		"lint:scss:fix": "stylelint assets/src/**/*.scss --fix",
+		"prepare": "husky install",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
+	"files": [
+		"*"
+	],
+	"author": "",
+	"license": "ISC",
+	"description": "",
 	"devDependencies": {
-		"@wordpress/icons": "^10.0.0",
-		"@wordpress/scripts": "^31.7.0",
+		"@wordpress/icons": "^11.2.0",
 		"clsx": "^2.1.1",
+		"@wordpress/scripts": "^31.7.0",
 		"eslint": "^8.57.1",
 		"eslint-config-prettier": "10.1.1",
 		"eslint-config-wordpress": "^2.0.0",
@@ -15,15 +34,6 @@
 		"stylelint": "^16.15.0",
 		"stylelint-config-standard-scss": "^14.0.0",
 		"stylelint-scss": "^6.11.1"
-	},
-	"scripts": {
-		"build": "wp-scripts build assets/src/admin.js --output-path=dist",
-		"start": "wp-scripts start assets/src/admin.js --output-path=dist",
-		"lint:js": "eslint eslint.config.js assets/src/**/*.js",
-		"lint:js:fix": "eslint assets/src/**/*.js --fix",
-		"lint:scss": "stylelint assets/src/**/*.scss",
-		"lint:scss:fix": "stylelint assets/src/**/*.scss --fix",
-		"prepare": "husky install"
 	},
 	"lint-staged": {
 		"*.js": "npm run lint:js",
